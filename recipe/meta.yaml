@@ -1,19 +1,19 @@
 {% set name = "safety" %}
-{% set version = "1.8.5" %}
+{% set version = "1.8.7" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5059f3ffab3648330548ea9c7403405bbfaf085b11235770825d14c58f24cb78
+  sha256: 3016631e0dd17193d6cf12e8ed1af92df399585e8ee0e4b1300d9e7e32b54903
 
 build:
   number: 0
   entry_points:
     - safety=safety.cli:cli
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
   noarch: python
 
 requirements:
