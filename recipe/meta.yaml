@@ -13,27 +13,33 @@ build:
   number: 0
   entry_points:
     - safety=safety.cli:cli
-  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
 
 requirements:
   host:
     - pip
-    - python
-    - setuptools
+    - python >=3.5
   run:
     - click >=6.0
-    - dparse >=0.4.1
+    - dparse >=0.5.1
     - packaging
-    - python
+    - python >=3.5
     - requests
     - setuptools
 
 test:
+  source_files:
+    - tests
+  requires:
+    - pip
+    - pytest
   imports:
     - safety
   commands:
+    - python -m pip check
     - safety --help
+    - pytest
 
 about:
   home: https://pyup.io/safety
@@ -47,3 +53,4 @@ about:
 extra:
   recipe-maintainers:
     - jkornblum
+    - bollwvyl
