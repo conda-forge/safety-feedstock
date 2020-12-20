@@ -5,11 +5,13 @@ Home: https://pyup.io/safety
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/safety-feedstock/blob/master/LICENSE.txt)
 
 Summary: Safety checks your installed dependencies for known security vulnerabilities.
 
+Development: https://github.com/pyupio/safety
 
+Documentation: https://pyup.io/docs
 
 Current build status
 ====================
