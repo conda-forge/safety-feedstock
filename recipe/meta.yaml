@@ -1,5 +1,5 @@
 {% set name = "safety" %}
-{% set version = "1.9.0" %}
+{% set version = "1.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 23bf20690d4400edc795836b0c983c2b4cbbb922233108ff925b7dd7750f00c9
+  sha256: 2ebc71b44666588d7898905d86d575933fcd5fa3c92d301ed12482602b1e928a
 
 build:
   number: 0
