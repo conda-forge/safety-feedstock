@@ -2,7 +2,7 @@
 {% set version = "1.10.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
@@ -37,7 +37,7 @@ test:
   imports:
     - safety
   commands:
-    - python -m pip check
+    - pip check
     - safety --help
     - pytest
 
