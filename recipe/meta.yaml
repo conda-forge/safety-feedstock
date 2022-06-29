@@ -1,13 +1,12 @@
-{% set name = "safety" %}
-{% set version = "1.10.3" %}
+{% set version = "2.0.0" %}
 
 package:
-  name: {{ name }}
+  name: safety
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 30e394d02a20ac49b7f65292d19d38fa927a8f9582cdfd3ad1adbbc66c641ad5
+  url: https://pypi.io/packages/source/s/safety/safety-{{ version }}.tar.gz
+  sha256: d739d00a9e4203cfaba34540c822a73ca1d327159ed7776b3dce09391f81c35d
 
 build:
   number: 0
@@ -19,14 +18,15 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python >=3.6
   run:
-    - click >=6.0
+    - click >=8.0.2
     - dparse >=0.5.1
-    - packaging
-    - python >=3.5
+    - packaging >=21.0
+    - python >=3.6
     - requests
-    - setuptools
+    - ruamel.yaml >=0.17.21
+    - setuptools >=19.3
 
 test:
   source_files:
@@ -39,6 +39,7 @@ test:
   commands:
     - pip check
     - safety --help
+    - safety --version
     - pytest
 
 about:
