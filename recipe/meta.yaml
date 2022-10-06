@@ -1,4 +1,4 @@
-{% set version = "2.2.1" %}
+{% set version = "2.3.1" %}
 
 package:
   name: safety
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/safety/safety-{{ version }}.tar.gz
-  sha256: d8b48c46ac6628bb83441b7dddc4756cfe2582abe13a112ee6e4ef1a34aad032
+  sha256: 6e6fcb7d4e8321098cf289f59b65051cafd3467f089c6e57c9f894ae32c23b71
 
 build:
   number: 0
