@@ -37,6 +37,8 @@ test:
     - git
   imports:
     - safety
+    - safety.alerts
+    - safety.formatters
   commands:
     - pip check
     - safety --help
