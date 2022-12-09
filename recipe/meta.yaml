@@ -1,4 +1,4 @@
-{% set version = "2.3.4" %}
+{% set version = "2.3.5" %}
 
 package:
   name: safety
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/safety/safety-{{ version }}.tar.gz
-  sha256: b9e74e794e82f54d11f4091c5d820c4d2d81de9f953bf0b4f33ac8bc402ae72c
+  sha256: a60c11f8952f412cbb165d70cb1f673a3b43a2ba9a93ce11f97e6a4de834aa3a
 
 build:
   number: 0
@@ -22,7 +22,7 @@ requirements:
   run:
     - click >=8.0.2
     - dparse >=0.6.2
-    - packaging >=21.0
+    - packaging >=21.0,<22.0
     - python >=3.6
     - requests
     - ruamel.yaml >=0.17.21
