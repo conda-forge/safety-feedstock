@@ -12,7 +12,7 @@ build:
   number: 0
   entry_points:
     - safety=safety.cli:cli
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
 
 requirements:
