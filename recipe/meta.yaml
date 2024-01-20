@@ -20,13 +20,22 @@ requirements:
     - pip
     - python >=3.6
   run:
+    - authlib >=1.2.0
     - click >=8.0.2
-    - dparse >=0.6.2
-    - packaging >=21.0,<22.0
+    - dparse >=0.6.4b0
+    - jinja2 >=3.1.0
+    - marshmallow >=3.15.0
+    - packaging >=21.0
+    - pydantic >=1.10.12,<2.0
     - python >=3.6
     - requests
+    - rich
     - ruamel.yaml >=0.17.21
-    - setuptools >=19.3
+    - safety-schemas >=0.0.1
+    - setuptools >=65.5.1
+    - typer
+    - typing-extensions >=4.7.1
+    - urllib3 >=1.26.5
 
 test:
   source_files:
