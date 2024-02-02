@@ -1,4 +1,6 @@
 {% set version = "3.0.1" %}
+{% set test_skips = "not validate_with_basic_policy_file" %}
+{% set cov_fail_under = 52 %}
 
 package:
   name: safety
@@ -41,16 +43,20 @@ test:
   source_files:
     - tests
   requires:
+    - coverage
+    - git
     - pip
     - pytest
-    - git
   imports:
     - safety
   commands:
     - pip check
     - safety --help
     - safety --version
-    - pytest
+    # as of 3.0.1, `test_utils.py` circular imports when not tested next to source
+    - python -c "__import__('shutil').rmtree('tests/alerts')"
+    - coverage run --source safety --branch -m pytest -vv --tb=long --color=yes -k "{{ test_skips }}"
+    - coverage report --show-missing --skip-covered --fail-under={{ cov_fail_under }}
 
 about:
   home: https://pyup.io/safety
