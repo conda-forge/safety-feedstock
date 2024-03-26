@@ -1,4 +1,5 @@
-{% set version = "3.0.1" %}
+{% set version = "3.1.0" %}
+{% set min_python = "python >=3.6" %}
 {% set test_skips = "not validate_with_basic_policy_file" %}
 {% set cov_fail_under = 52 %}
 
@@ -8,32 +9,32 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/safety/safety-{{ version }}.tar.gz
-  sha256: 1f2000f03652f3a0bfc67f8fd1e98bc5723ccb76e15cb1bdd68545c3d803df01
+  sha256: 71f47b82ece153ec2f240e277f7cbfa70d5da2e0d143162c67f63b2f7459a1aa
 
 build:
   number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - safety=safety.cli:cli
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  noarch: python
 
 requirements:
   host:
+    - {{ min_python }}
     - pip
-    - python >=3.6
   run:
+    - {{ min_python }}
     - authlib >=1.2.0
     - click >=8.0.2
     - dparse >=0.6.4b0
     - jinja2 >=3.1.0
     - marshmallow >=3.15.0
     - packaging >=21.0
-    - pydantic >=1.10.12,<2.0
-    - python >=3.6
+    - pydantic >=1.10.12
     - requests
     - rich
     - ruamel.yaml >=0.17.21
-    - safety-schemas >=0.0.1
+    - safety-schemas >=0.0.2
     - setuptools >=65.5.1
     - typer
     - typing-extensions >=4.7.1
