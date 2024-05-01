@@ -1,6 +1,4 @@
-{% set min_python = "python >=3.6" %}
 {% set version = "3.2.0" %}
-{% set min_python = "python >=3.6" %}
 {% set test_skips = "not validate_with_basic_policy_file" %}
 {% set cov_fail_under = 52 %}
 
@@ -21,10 +19,9 @@ build:
 
 requirements:
   host:
-    - {{ min_python }}
     - pip
+    - python >=3.7
   run:
-    - {{ min_python }}
     - authlib >=1.2.0
     - click >=8.0.2
     - dparse >=0.6.4b0
@@ -32,6 +29,7 @@ requirements:
     - marshmallow >=3.15.0
     - packaging >=21.0
     - pydantic >=1.10.12
+    - python >=3.7
     - requests
     - rich
     - ruamel.yaml >=0.17.21
