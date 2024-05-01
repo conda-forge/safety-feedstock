@@ -1,5 +1,4 @@
-{% set version = "3.1.0" %}
-{% set min_python = "python >=3.6" %}
+{% set version = "3.2.0" %}
 {% set test_skips = "not validate_with_basic_policy_file" %}
 {% set cov_fail_under = 52 %}
 
@@ -9,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/safety/safety-{{ version }}.tar.gz
-  sha256: 71f47b82ece153ec2f240e277f7cbfa70d5da2e0d143162c67f63b2f7459a1aa
+  sha256: 8bd5cab5f3d8a61ce0ea6e98f267c1006d056097c45c644fee7afeff7d5949c1
 
 build:
   number: 0
@@ -20,10 +19,9 @@ build:
 
 requirements:
   host:
-    - {{ min_python }}
     - pip
+    - python >=3.7
   run:
-    - {{ min_python }}
     - authlib >=1.2.0
     - click >=8.0.2
     - dparse >=0.6.4b0
@@ -31,6 +29,7 @@ requirements:
     - marshmallow >=3.15.0
     - packaging >=21.0
     - pydantic >=1.10.12
+    - python >=3.7
     - requests
     - rich
     - ruamel.yaml >=0.17.21
