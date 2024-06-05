@@ -36,7 +36,7 @@ requirements:
     - safety-schemas >=0.0.2
     - setuptools >=65.5.1
     - typer
-    - typing-extensions >=4.7.1
+    - typing_extensions >=4.7.1
     - urllib3 >=1.26.5
 
 test:
