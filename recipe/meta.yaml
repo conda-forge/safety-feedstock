@@ -1,4 +1,4 @@
-{% set version = "3.2.0" %}
+{% set version = "3.2.1" %}
 {% set test_skips = "not validate_with_basic_policy_file" %}
 {% set cov_fail_under = 52 %}
 
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/safety/safety-{{ version }}.tar.gz
-  sha256: 8bd5cab5f3d8a61ce0ea6e98f267c1006d056097c45c644fee7afeff7d5949c1
+  sha256: 770aed6ff46536e5363a409e8cca411d8636d07dc33be53a8ac69bf750ab8df3
 
 build:
   number: 0
@@ -36,7 +36,7 @@ requirements:
     - safety-schemas >=0.0.2
     - setuptools >=65.5.1
     - typer
-    - typing-extensions >=4.7.1
+    - typing_extensions >=4.7.1
     - urllib3 >=1.26.5
 
 test:
