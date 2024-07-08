@@ -1,4 +1,4 @@
-{% set version = "3.2.3" %}
+{% set version = "3.2.4" %}
 {% set test_skips = "not validate_with_basic_policy_file" %}
 {% set cov_fail_under = 52 %}
 
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/safety/safety-{{ version }}.tar.gz
-  sha256: 414154934f1727daf8a6473493944fecb380540c3f00875dc1ae377382f7d83f
+  sha256: bac0202016d736a2118057964a0e3983fa20ff2563fd103cac3f3ac1ed3fea11
 
 build:
   number: 0
@@ -25,6 +25,7 @@ requirements:
     - authlib >=1.2.0
     - click >=8.0.2
     - dparse >=0.6.4b0
+    - filelock >=3.12.2,<3.13
     - jinja2 >=3.1.0
     - marshmallow >=3.15.0
     - packaging >=21.0
