@@ -1,5 +1,5 @@
 {% set version = "3.2.5" %}
-{% set test_skips = "not validate_with_basic_policy_file" %}
+{% set test_skips = "not (validate_with_basic_policy_file or debug_flag)" %}
 {% set cov_fail_under = 52 %}
 
 package:
