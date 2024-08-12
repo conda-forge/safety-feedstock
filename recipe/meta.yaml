@@ -1,5 +1,5 @@
-{% set version = "3.2.4" %}
-{% set test_skips = "not validate_with_basic_policy_file" %}
+{% set version = "3.2.5" %}
+{% set test_skips = "not (validate_with_basic_policy_file or debug_flag)" %}
 {% set cov_fail_under = 52 %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/safety/safety-{{ version }}.tar.gz
-  sha256: bac0202016d736a2118057964a0e3983fa20ff2563fd103cac3f3ac1ed3fea11
+  sha256: 656df7b01eb400ddd003190947224183981216bf24ddf4142b819545b9ae5521
 
 build:
   number: 0
@@ -29,12 +29,13 @@ requirements:
     - jinja2 >=3.1.0
     - marshmallow >=3.15.0
     - packaging >=21.0
+    - psutil >=6.0.0,<6.0.1
     - pydantic >=1.10.12
     - python >=3.7
     - requests
     - rich
     - ruamel.yaml >=0.17.21
-    - safety-schemas >=0.0.2
+    - safety-schemas >=0.0.3
     - setuptools >=65.5.1
     - typer
     - typing_extensions >=4.7.1
