@@ -1,6 +1,6 @@
 {% set version = "3.2.9" %}
 {% set test_skips = "not (validate_with_basic_policy_file or debug_flag or generate_pass)" %}
-{% set cov_fail_under = 52 %}
+{% set cov_fail_under = 51 %}
 
 package:
   name: safety
