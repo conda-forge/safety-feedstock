@@ -1,4 +1,4 @@
-{% set version = "3.2.10" %}
+{% set version = "3.2.11" %}
 {% set test_skips = "not (validate_with_basic_policy_file or debug_flag or generate_pass)" %}
 {% set cov_fail_under = 51 %}
 {% if 1 %}{% set min_safety_schema = "0.0.8" %}{% endif %}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/safety/safety-{{ version }}.tar.gz
-  sha256: 8ed71c43869f96613797c3ef9f0e27927db6c05d1ff81d5439bb64c13cc45242
+  sha256: 70a3b7cc75ba41907bf1705bcbbeab232688657c21088e108712ecb601fe0f20
 
 build:
   number: 0
