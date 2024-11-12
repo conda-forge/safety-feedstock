@@ -1,4 +1,6 @@
 {% set version = "3.2.11" %}
+{% set python_min = python_min | default("3.9") %}
+
 {% set test_skips = "not (validate_with_basic_policy_file or debug_flag or generate_pass)" %}
 {% set cov_fail_under = 51 %}
 {% if 1 %}{% set min_safety_schema = "0.0.8" %}{% endif %}
@@ -8,32 +10,33 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/safety/safety-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/s/safety/safety-{{ version }}.tar.gz
   sha256: 70a3b7cc75ba41907bf1705bcbbeab232688657c21088e108712ecb601fe0f20
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: 
+    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
   entry_points:
     - safety=safety.cli:cli
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools >=42
   run:
     - authlib >=1.2.0
     - click >=8.0.2
-    - dparse >=0.6.4b0
+    - dparse >=0.6.4
     - filelock >=3.12.2,<3.13
     - jinja2 >=3.1.0
     - marshmallow >=3.15.0
     - packaging >=21.0
     - psutil >=6.0.0,<6.0.1
     - pydantic >=1.10.12
-    - python >=3.7
+    - python >={{ python_min }}
     - requests
     - rich
     - ruamel.yaml >=0.17.21
@@ -50,6 +53,7 @@ test:
     - coverage
     - git
     - pip
+    - python {{ python_min }}
     - pytest
     - safety-schemas =={{ min_safety_schema }}
   imports:
