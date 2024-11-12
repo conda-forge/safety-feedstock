@@ -1,5 +1,5 @@
 cdt_name:
-- cos7
+- conda
 channel_sources:
 - conda-forge/label/dparse_beta,conda-forge
 channel_targets:
