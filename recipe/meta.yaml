@@ -3,6 +3,7 @@
 
 {% set test_skips = "not (validate_with_basic_policy_file or debug_flag or generate_pass)" %}
 {% set cov_fail_under = 50 %}
+{% set min_safety_schema = "0.0.10" %}
 
 package:
   name: safety
@@ -39,7 +40,7 @@ requirements:
     - requests
     - rich
     - ruamel.yaml >=0.17.21
-    - safety-schemas ==0.0.10
+    - safety-schemas =={{ min_safety_schema }}
     - setuptools >=65.5.1
     - typer
     - typing_extensions >=4.7.1
