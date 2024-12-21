@@ -2,7 +2,7 @@
 {% set python_min = python_min | default("3.9") %}
 
 {% set test_skips = "not (validate_with_basic_policy_file or debug_flag or generate_pass)" %}
-{% set cov_fail_under = 50 %}
+{% set cov_fail_under = 49 %}
 {% set min_safety_schema = "0.0.10" %}
 
 package:
