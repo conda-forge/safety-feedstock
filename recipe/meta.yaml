@@ -1,4 +1,4 @@
-{% set version = "3.2.13" %}
+{% set version = "3.2.14" %}
 {% set python_min = python_min | default("3.9") %}
 
 {% set test_skips = "not (validate_with_basic_policy_file or debug_flag or generate_pass)" %}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/safety/safety-{{ version }}.tar.gz
-  sha256: 9328510c3286d67a788346d60df531b8bd2f35abbed3ac4dfaf8d119e6eec1ae
+  sha256: 7a45d88b1903c5b7c370eaeb6ca131a52f147e0b8a0b302265f82824ef92adc7
 
 build:
   number: 0
