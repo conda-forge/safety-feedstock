@@ -59,18 +59,17 @@ tests:
       run:
         - coverage
         - git
-        - python ${{ python_min }}.*
+        - pip
         - pytest
-        - safety-schemas ==${{ min_safety_schema }}
+        - python ${{ python_min }}.*
     script:
-      - pip check
       - safety --help
       - safety --version
       - python run_test.py
 
 about:
   license: MIT
-  license_file: LICENSE
+  license_file: LICENSES/
   summary: Safety checks your installed dependencies for known security vulnerabilities.
   homepage: https://pyup.io/safety
   repository: https://github.com/pyupio/safety

@@ -2,7 +2,7 @@ import sys
 from subprocess import call
 import shutil
 
-FAIL_UNDER = "49"
+FAIL_UNDER = "51"
 COV = ["coverage"]
 RUN = ["run", "--source=safety", "--branch", "-m"]
 PYTEST = ["pytest", "-vv", "--color=yes", "--tb=long"]
