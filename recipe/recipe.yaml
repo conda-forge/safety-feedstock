@@ -31,7 +31,7 @@ requirements:
     - click >=8.0.2
     - dparse >=0.6.4
     - filelock >=3.16.1,<3.17
-    - hhtpx
+    - httpx
     - jinja2 >=3.1.0
     - marshmallow >=3.15.0
     - nltk >=3.9
