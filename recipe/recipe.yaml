@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "3.3.1"
+  version: "3.4.0"
 
 package:
   name: safety
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/safety/safety-${{ version }}.tar.gz
-  sha256: 679834432d0ad64c54e0b864ac6715d4743a65f8db67512380ee7ee2011c206a
+  sha256: fc8763166616751c468bf401e66bdf6a87ea5f544c8b32679d6ba4c48c33c679
 
 build:
   number: 0
@@ -31,6 +31,7 @@ requirements:
     - click >=8.0.2
     - dparse >=0.6.4
     - filelock >=3.16.1,<3.17
+    - httpx
     - jinja2 >=3.1.0
     - marshmallow >=3.15.0
     - nltk >=3.9
@@ -40,16 +41,21 @@ requirements:
     - python >=${{ python_min }}
     - requests
     - ruamel.yaml >=0.17.21
-    - safety-schemas ==0.0.11
+    - safety-schemas ==0.0.14
     - setuptools >=65.5.1
+    - tenacity
+    - tomli
+    - tomlkit
     - typer >=0.12.1
     - typing_extensions >=4.7.1
 
 tests:
   - python:
       pip_check: true
-      python_version: ${{ python_min }}.*
       imports: safety
+      python_version: 
+        - ${{ python_min }}.*
+        - 3.13.*
   - files:
       recipe:
         - run_test.py
