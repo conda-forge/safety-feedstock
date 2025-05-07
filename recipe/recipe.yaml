@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "3.4.0"
+  version: "3.5.0"
 
 package:
   name: safety
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/safety/safety-${{ version }}.tar.gz
-  sha256: fc8763166616751c468bf401e66bdf6a87ea5f544c8b32679d6ba4c48c33c679
+  sha256: 7223af388bde5323867eca5495f9817746289be9fd5b1896f168dc7082ea8ff1
 
 build:
   number: 0
@@ -53,7 +53,7 @@ tests:
   - python:
       pip_check: true
       imports: safety
-      python_version: 
+      python_version:
         - ${{ python_min }}.*
         - 3.13.*
   - files:
