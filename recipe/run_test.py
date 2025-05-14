@@ -12,6 +12,8 @@ SKIPS = [
     "validate_with_basic_policy_file",
     "debug_flag",
     "generate_pass",
+    # https://github.com/conda-forge/safety-feedstock/pull/42
+    "validate_with_policy_file_using_invalid_keyword",
 ]
 
 SKIP_OR = " or ".join(SKIPS)
