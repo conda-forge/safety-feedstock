@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "3.5.2"
+  version: "3.6.0"
 
 package:
   name: safety
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/safety/safety-${{ version }}.tar.gz
-  sha256: ecbb2e76f9574284f2c0e168e71ec92b39018ae9516b3b00f132de57ecaa09cb
+  sha256: a820f827699f83d3d5c2faab24c0ac4d094911931503180847d97942c0a6f7e3
 
 build:
   number: 0
@@ -28,7 +28,7 @@ requirements:
     - python ${{ python_min }}.*
   run:
     - authlib >=1.2.0
-    - click >=8.0.2,<8.2.0
+    - click >=8.0.2
     - dparse >=0.6.4
     - filelock >=3.16.1,<3.17
     - httpx
@@ -46,7 +46,7 @@ requirements:
     - tenacity
     - tomli
     - tomlkit
-    - typer >=0.12.1
+    - typer >=0.16.0
     - typing_extensions >=4.7.1
 
 tests:
