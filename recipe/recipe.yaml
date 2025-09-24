@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "3.6.1"
+  version: "3.6.2"
 
 package:
   name: safety
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/safety/safety-${{ version }}.tar.gz
-  sha256: 4d021e61cb8be527274560e5729616155b42e5442ca54e62c57da40076d80fd4
+  sha256: 2e148cd9a4ad2e387d2c142878b7b5a3a9cb9e6538167043faa1ba7023a032be
 
 build:
   number: 0
@@ -37,11 +37,11 @@ requirements:
     - nltk >=3.9
     - packaging >=21.0
     - psutil >=6.1.0,<8
-    - pydantic >=2.6.0,<2.10.0
+    - pydantic >=2.6.0
     - python >=${{ python_min }}
     - requests
     - ruamel.yaml >=0.17.21
-    - safety-schemas ==0.0.14
+    - safety-schemas ==0.0.16
     - setuptools >=65.5.1
     - tenacity
     - tomli
