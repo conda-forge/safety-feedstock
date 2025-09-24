@@ -41,7 +41,7 @@ requirements:
     - python >=${{ python_min }}
     - requests
     - ruamel.yaml >=0.17.21
-    - safety-schemas ==0.0.14
+    - safety-schemas ==0.0.16
     - setuptools >=65.5.1
     - tenacity
     - tomli
