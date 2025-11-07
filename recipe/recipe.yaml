@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "3.6.2"
+  version: "3.7.0"
 
 package:
   name: safety
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/safety/safety-${{ version }}.tar.gz
-  sha256: 2e148cd9a4ad2e387d2c142878b7b5a3a9cb9e6538167043faa1ba7023a032be
+  sha256: daec15a393cafc32b846b7ef93f9c952a1708863e242341ab5bde2e4beabb54e
 
 build:
   number: 0
