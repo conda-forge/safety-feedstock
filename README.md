@@ -3,7 +3,7 @@ About safety-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/safety-feedstock/blob/main/LICENSE.txt)
 
-Home: https://pyup.io/safety
+Home: https://pypi.org/project/safety
 
 Package license: MIT
 
